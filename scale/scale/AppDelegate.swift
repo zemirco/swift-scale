@@ -14,9 +14,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.makeKeyAndVisible()
         
         
-        var scale = Scale().domain([0, 5]).range([0, 100]).linear()
-        println(scale(c: 2.5))
+        var scale01 = Scale().linear()
+        println(scale01(c: 2.5)) // 2.5
         
+        var scale02 = Scale(domain: [0, 5], range: [0, 100]).linear()
+        println(scale02(c: 2.5)) // 50
+        
+        var scale03 = Scale(range: [0, 100]).linear()
+        println(scale03(c: 2.5)) // 250
+        
+        var colors = Scale().category10()
+        self.window!.backgroundColor = colors(x: 2)
         
         return true
     }
