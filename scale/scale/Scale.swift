@@ -5,18 +5,6 @@ class Scale {
     
     var domain: NSArray = []
     var range: NSArray = []
-    var d3_category10: Array<Int> = [
-        0x1f77b4,
-        0xff7f0e,
-        0x2ca02c,
-        0xd62728,
-        0x9467bd,
-        0x8c564b,
-        0xe377c2,
-        0x7f7f7f,
-        0xbcbd22,
-        0x17becf
-    ]
     
     init(domain: NSArray = [0, 1], range: NSArray = [0, 1]) {
         self.domain = domain
@@ -27,8 +15,21 @@ class Scale {
         return scale_bilinear(self.domain, range: self.range, uninterpolate: uninterpolate, interpolate: interpolate)
     }
     
-    func mx(data: Array<NSNumber>) -> NSNumber {
-        return data.reduce(Int.min, { max(Int($0), Int($1)) })
+    func ordinal() -> (c: AnyObject) -> AnyObject? {
+        return scale_ordinal
+    }
+    
+    func scale_ordinal(c: AnyObject) -> AnyObject? {
+        // find index for c in first array
+        println(self.domain)
+        println(c)
+        var test = self.domain.indexOfObject(String(c as NSString))
+        println("test: \(test)")
+        
+        if c.integerValue < self.range.count {
+            return self.range[c.integerValue]
+        }
+        return nil
     }
     
     func interpolate(a: NSNumber, b: NSNumber) -> (c: NSNumber) -> NSNumber {
@@ -57,21 +58,22 @@ class Scale {
         return test
     }
     
-    func category10() -> (x: NSNumber) -> UIColor {
-        var colors = d3_category10.map({color -> UIColor in
-            return self.UIColorFromHex(color)
-        })
-        func test(x: NSNumber) -> UIColor {
-            return colors[Int(x)]
-        }
-        return test
-    }
+    var d3_category10: Array<NSNumber> = [
+        0x1f77b4,
+        0xff7f0e,
+        0x2ca02c,
+        0xd62728,
+        0x9467bd,
+        0x8c564b,
+        0xe377c2,
+        0x7f7f7f,
+        0xbcbd22,
+        0x17becf
+    ]
     
-    func UIColorFromHex(hex: Int) -> UIColor {
-        var red = CGFloat((hex & 0xFF0000) >> 16) / 255.0
-        var green = CGFloat((hex & 0xFF00) >> 8) / 255.0
-        var blue = CGFloat((hex & 0xFF)) / 255.0
-        return UIColor(red: red, green: green, blue: blue, alpha: 1)
+    func category10() -> (x: AnyObject) -> AnyObject? {
+        self.range = d3_category10
+        return scale_ordinal
     }
 
     
