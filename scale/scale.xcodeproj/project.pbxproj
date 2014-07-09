@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0056E82196A867E00761A5D /* d3_map.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0056E81196A867E00761A5D /* d3_map.swift */; };
 		C00F23901967216100CC9A52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00F238F1967216100CC9A52 /* AppDelegate.swift */; };
 		C00F23921967216100CC9A52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00F23911967216100CC9A52 /* Images.xcassets */; };
 		C00F239E1967216100CC9A52 /* scaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00F239D1967216100CC9A52 /* scaleTests.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C0056E81196A867E00761A5D /* d3_map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = d3_map.swift; sourceTree = "<group>"; };
 		C00F238A1967216100CC9A52 /* scale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00F238E1967216100CC9A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C00F238F1967216100CC9A52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				C00F238F1967216100CC9A52 /* AppDelegate.swift */,
 				C00F23A71967219200CC9A52 /* Scale.swift */,
+				C0056E81196A867E00761A5D /* d3_map.swift */,
 				C00F23911967216100CC9A52 /* Images.xcassets */,
 				C00F238D1967216100CC9A52 /* Supporting Files */,
 			);
@@ -205,6 +208,7 @@
 			files = (
 				C00F23A81967219200CC9A52 /* Scale.swift in Sources */,
 				C00F23901967216100CC9A52 /* AppDelegate.swift in Sources */,
+				C0056E82196A867E00761A5D /* d3_map.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +385,7 @@
 				C00F23A31967216100CC9A52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C00F23A41967216100CC9A52 /* Build configuration list for PBXNativeTarget "scaleTests" */ = {
 			isa = XCConfigurationList;
@@ -389,6 +394,7 @@
 				C00F23A61967216100CC9A52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
