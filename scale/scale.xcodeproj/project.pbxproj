@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0056E82196A867E00761A5D /* d3_map.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0056E81196A867E00761A5D /* d3_map.swift */; };
 		C00F23901967216100CC9A52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00F238F1967216100CC9A52 /* AppDelegate.swift */; };
 		C00F23921967216100CC9A52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00F23911967216100CC9A52 /* Images.xcassets */; };
-		C00F239E1967216100CC9A52 /* scaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00F239D1967216100CC9A52 /* scaleTests.swift */; };
-		C00F23A81967219200CC9A52 /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00F23A71967219200CC9A52 /* Scale.swift */; };
+		C00F23A81967219200CC9A52 /* Linear.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00F23A71967219200CC9A52 /* Linear.swift */; };
+		C0166A311A26729B00D752B7 /* scaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00F239D1967216100CC9A52 /* scaleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +24,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C0056E81196A867E00761A5D /* d3_map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = d3_map.swift; sourceTree = "<group>"; };
 		C00F238A1967216100CC9A52 /* scale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00F238E1967216100CC9A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C00F238F1967216100CC9A52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +31,7 @@
 		C00F23971967216100CC9A52 /* scaleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = scaleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00F239C1967216100CC9A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C00F239D1967216100CC9A52 /* scaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scaleTests.swift; sourceTree = "<group>"; };
-		C00F23A71967219200CC9A52 /* Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
+		C00F23A71967219200CC9A52 /* Linear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Linear.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				C00F238F1967216100CC9A52 /* AppDelegate.swift */,
-				C00F23A71967219200CC9A52 /* Scale.swift */,
-				C0056E81196A867E00761A5D /* d3_map.swift */,
+				C00F23A71967219200CC9A52 /* Linear.swift */,
 				C00F23911967216100CC9A52 /* Images.xcassets */,
 				C00F238D1967216100CC9A52 /* Supporting Files */,
 			);
@@ -206,9 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C00F23A81967219200CC9A52 /* Scale.swift in Sources */,
+				C00F23A81967219200CC9A52 /* Linear.swift in Sources */,
 				C00F23901967216100CC9A52 /* AppDelegate.swift in Sources */,
-				C0056E82196A867E00761A5D /* d3_map.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C00F239E1967216100CC9A52 /* scaleTests.swift in Sources */,
+				C0166A311A26729B00D752B7 /* scaleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

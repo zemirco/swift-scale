@@ -1,35 +1,47 @@
-//
-//  scaleTests.swift
-//  scaleTests
-//
-//  Created by Zeiss, Mirco on 04.07.14.
-//  Copyright (c) 2014 zemirco. All rights reserved.
-//
 
+import scale
 import XCTest
 
 class scaleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testDefaultDomainRange() {
+        var linear = Linear().scale()
+        var result = linear(c: 2.5)
+        XCTAssertEqual(result, 2.5)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
+    func testDomain() {
+        var linear = Linear(domain: [0, 100]).scale()
+        var result = linear(c: 50)
+        XCTAssertEqual(result, 0.5)
+    }
+    
+    func testRange() {
+        var linear = Linear(range: [0, 100]).scale()
+        var result = linear(c: 0.5)
+        XCTAssertEqual(result, 50)
+    }
+    
+    func testRangeAndDomain() {
+        var linear = Linear(domain: [2, 10], range: [2, 100]).scale()
+        var result = linear(c: 3)
+        var expected: Double = 12.5
+        XCTAssertEqual(result, expected)
+    }
+    
+    func testInvert() {
+        var invert = Linear(domain: [0, 10], range: [0, 100]).invert()
+        var result = invert(x: 75)
+        var expected: Double = 7.5
+        XCTAssertEqual(result, expected)
     }
     
 }
